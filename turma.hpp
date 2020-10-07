@@ -24,7 +24,9 @@ public:
   void listarAlunos();
   int getCapacidade();
   void addAluno(Aluno* novo);
-  void remAluno(string nome);
+  void removePeloNome(string nome);
+  void removePeloCpf(string cpf);
+  void removePeloEmail(string email);
 };
 
 #endif

@@ -25,7 +25,8 @@ string Turma::getNome(){
       alunos[capacidade++] = novo;
     }    
   };
-  void Turma::remAluno(string nome){
+
+  void Turma::removePeloNome(string nome){
     bool encontrou = false;
     for (int i=0; i<this->capacidade; ++i ){
       if (this->alunos[i]->getNome() == nome){
@@ -34,13 +35,48 @@ string Turma::getNome(){
         alunos[i+1] = tmp;
         encontrou = true;
       }
-    }
-    if (encontrou){
-      delete alunos[this->capacidade];
-      this->capacidade--;
-    }
+    
+  }
+  if (encontrou==true) {
+    delete alunos[this->capacidade];
+    this->capacidade--;
+  }
+  }
 
-  };
+  void Turma::removePeloCpf(string cpf){
+    bool encontrou = false;
+    for (int i=0; i<this->capacidade; ++i ){
+      if (this->alunos[i]->getCpf() == cpf){
+        Aluno* tmp = alunos[i];
+        alunos[i] = alunos[i+1];
+        alunos[i+1] = tmp;
+        encontrou = true;
+      }
+    
+  }
+  if (encontrou==true) {
+    delete alunos[this->capacidade];
+    this->capacidade--;
+  }
+  }
+
+  void Turma::removePeloEmail(string email){
+     bool encontrou = false;
+    for (int i=0; i<this->capacidade; ++i ){
+      if (this->alunos[i]->getEmail() == email){
+        Aluno* tmp = alunos[i];
+        alunos[i] = alunos[i+1];
+        alunos[i+1] = tmp;
+        encontrou = true;
+      }
+    
+  }
+  if (encontrou==true) {
+    delete alunos[this->capacidade];
+    this->capacidade--;
+  }
+  }
+  
 
   int Turma::getCapacidade(){
     return this->capacidade;

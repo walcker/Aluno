@@ -40,7 +40,8 @@ int main(int argc, char const *argv[]){
 
   imd0030.listarAlunos();
 
-  imd0030.remAluno("Qualquer um");
+  imd0030.removePeloNome("Qualquer um");
+  imd0030.removePeloCpf("47792937347");
 
   cout << imd0030.getId() << " _ " << imd0030.getCapacidade() << "/" << CAPACIDADE_MAX << endl;
 
