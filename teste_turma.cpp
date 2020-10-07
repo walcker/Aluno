@@ -15,10 +15,36 @@ int main(int argc, char const *argv[]){
   maria->setMatricula(12345);
   maria->setEmail("maria@escolinha.com.br");
   maria->setTelefone("94509-3456");
-  
+
   imd0030.addAluno(maria);
+  
+  Aluno* jaspion = new Aluno();
+  jaspion->setNome("Jaspion police");
+  jaspion->setCpf("47792937347");
+  jaspion->setMatricula(7544);
+  jaspion->setEmail("jaspion@manchete.com.br");
+  jaspion->setTelefone("97654-9876");
+
+  imd0030.addAluno(jaspion);
+
+  Aluno* lampiao = new Aluno();
+  lampiao->setNome("Lampião bandido");
+  lampiao->setCpf("000000666");
+  lampiao->setMatricula(256346547);
+  lampiao->setEmail("lampiao@nordestebr");
+  
+  imd0030.addAluno(lampiao);
+  
 
   cout << imd0030.getId() << " _ " << imd0030.getCapacidade() << "/" << CAPACIDADE_MAX << endl;
+
+  imd0030.listarAlunos();
+
+  imd0030.remAluno("Qualquer um");
+
+  cout << imd0030.getId() << " _ " << imd0030.getCapacidade() << "/" << CAPACIDADE_MAX << endl;
+
+  imd0030.listarAlunos();
 
   return 0;
 }

@@ -36,7 +36,7 @@ string Turma::getNome(){
       }
     }
     if (encontrou){
-      delete alunos[this->capacidade-1];
+      delete alunos[this->capacidade];
       this->capacidade--;
     }
 
