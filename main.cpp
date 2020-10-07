@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "aluno.hpp"
 
 using namespace std;
@@ -22,4 +22,4 @@ int main() {
   cout << "Temos um novo aluno: " << outro->getNome() << endl;
   cout << "Telefone: " << outro->getTelefone() << endl;
   return 0;
-}
+}*/
